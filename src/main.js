@@ -3,19 +3,14 @@ import { createDropdownTypes, createPokemonList } from './dom/index.js';
 
 const addListeners = () => {
 	// Code goes here
-	
+		
 	//Theme change
 	const themeSwitch = document.getElementById('header-checkbox');
 	themeSwitch.addEventListener('change', changeTheme);
 
-	function changeTheme(event) {
-		//var status = event.target.checked;
+	function changeTheme() {		
 		var mainContent = document.querySelector(".main-content");
-		var navBar = document.querySelector(".header__nav");
-
 		mainContent.classList.toggle('dark');
-		navBar.classList.toggle('dark');
-		//console.log(status);
 	}
 	//Theme change ends	
 
