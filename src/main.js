@@ -12,7 +12,7 @@ const toggleTheme = () => {
 
 	//Event listener that toggles the theme based on the Click event
 	checkbox.addEventListener('click', () => {
-		mainContent.classList.toggle('dark');
+		mainContent.classList.toggle(darkClass);
 	});
 };
 
