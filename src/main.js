@@ -16,7 +16,7 @@ const addListeners = () => {
 		}else {
 			console.log("Checkbox is not checked..");
 			background.classList.remove('dark');
-			header.classList.remove('dark');
+			header.classList.remove('dark'); 
 		}
 	});
 };
