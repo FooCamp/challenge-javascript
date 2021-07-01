@@ -8,7 +8,7 @@ const toggleTheme = () => {
 	// Select element that has the class main-content which is the one that needs to be toggled with the theme
 	const mainContent = document.querySelector('.main-content');
 	// Define the class that needs to be added/removed from the main-content
-	const darkClass = "dark";
+	const darkClass = 'dark';
 
 	//Event listener that toggles the theme based on the Click event
 	checkbox.addEventListener('click', () => {
@@ -17,8 +17,8 @@ const toggleTheme = () => {
 };
 
 const main = async () => {
-	const app = document.getElementById("app");
-	const dropdownTypes = document.getElementById("dropdown-types");
+	const app = document.getElementById('app');
+	const dropdownTypes = document.getElementById('dropdown-types');
 	const pokemonList = await getPokemonList();
 	
 	createPokemonList(pokemonList, app);
