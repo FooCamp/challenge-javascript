@@ -4,10 +4,10 @@ import { createDropdownTypes, createPokemonList } from './dom/index.js';
 const addListeners = () => {
 	// Code goes here
 	const check = document.querySelector ('.checkbox__slider');
-    check.addEventListener('click', () => {
-        const change = document.querySelector ('.main-content');
-        change.classList.toggle('dark')
-    });
+	check.addEventListener('click', () => {
+		const change = document.querySelector ('.main-content');
+		change.classList.toggle('dark')
+	});
 };
 
 const main = async () => {
