@@ -10,20 +10,16 @@ const addListeners = () => {
 	function typeShown(event) {
 		var pokeType = event.target.value;
 		var cardItems = document.getElementsByClassName('card-list__item');
-
-		for(let i = 0; i < cardItems.length; i++) {
-
+		
+		Array.prototype.forEach.call(cardItems, function(elem){
 			if(pokeType === 'all'){
-				cardItems[i].classList.remove('hide');
-				//console.log(`mostrando tipo: ${pokeType}`);
-			} else if (cardItems[i].getAttribute('data-types').includes(pokeType)) {
-				cardItems[i].classList.remove('hide');
-				//console.log(`mostrando tipo: ${pokeType}`);
+				elem.classList.remove('hide');
+			} else if(elem.getAttribute('data-types').includes(pokeType)){
+				elem.classList.remove('hide');
 			} else {
-				cardItems[i].classList.add('hide');
+				elem.classList.add('hide');
 			}
-
-		}
+		});
 	}
 	//Type Filter ends
 };
