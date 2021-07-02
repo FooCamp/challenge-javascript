@@ -1,8 +1,11 @@
 import { getPokemonList } from './api/index.js';
 import { createDropdownTypes, createPokemonList } from './dom/index.js';
 
+
+
 const addListeners = () => {
-	// Code goes here
+	var Dark= document.querySelector('.main-content');
+	Dark.classList.toggle('dark')
 };
 
 const main = async () => {
@@ -12,8 +15,13 @@ const main = async () => {
 	
 	createPokemonList(pokemonList, app);
 	createDropdownTypes(pokemonList, dropdownTypes);
-
+	Dark.classList.remove('dark');
 	addListeners();
 };
 
 main();
+
+
+var checkbox = document.querySelector(".checkbox__input");
+checkbox.addEventListener('click', addListeners);
+
