@@ -3,6 +3,20 @@ import { createDropdownTypes, createPokemonList } from './dom/index.js';
 
 const addListeners = () => {
 	// Code goes here
+	const dropdownElement = document.getElementById('dropdown-types');
+
+	dropdownElement.addEventListener('change', (event) => {
+		const selectedType = event.target.value;
+		const pokemonCards = document.querySelectorAll('.card-list__item');
+		pokemonCards.forEach(pokemonItem => {
+			const types = pokemonItem.getAttribute('data-types');
+			if (types.includes(selectedType) || selectedType === 'all') {
+  				pokemonItem.classList.remove('hide');
+			} else {
+				pokemonItem.classList.add('hide');
+			}
+		})
+	})
 };
 
 const main = async () => {
