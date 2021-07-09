@@ -3,6 +3,17 @@ import { createDropdownTypes, createPokemonList } from './dom/index.js';
 
 const addListeners = () => {
 	// Code goes here
+		
+	//Theme change
+	const themeSwitch = document.getElementById('header-checkbox');
+	themeSwitch.addEventListener('change', changeTheme);
+
+	function changeTheme() {		
+		var mainContent = document.querySelector(".main-content");
+		mainContent.classList.toggle('dark');
+	}
+	//Theme change ends	
+
 };
 
 const main = async () => {
